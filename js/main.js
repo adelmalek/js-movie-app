@@ -105,6 +105,7 @@ function getGenre() {
         genreDiv.id = genres.id;
         genreDiv.innerHTML = genre.name;
         genreDiv.addEventListener("click", () => {
+            searchInput.value = '';
             getMovies(`${API_URL}&with_genres=${genre.id}`);
         });
         sectionGenres.append(genreDiv);

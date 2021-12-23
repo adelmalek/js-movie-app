@@ -121,7 +121,15 @@ getGenre();
 function getMovies(url) {
     fetch(url)
         .then(response => response.json())
-        .then(data => displayMovies(data.results))
+        .then(data => {
+            if (data.total_results == "0") {
+                document.querySelector(".error").innerHTML = `No results.`
+                displayMovies(data.results)
+            } else { 
+                document.querySelector(".error").innerHTML = ``;
+                displayMovies(data.results)
+            }
+        })
         .catch(error => console.log(error))
 };
 

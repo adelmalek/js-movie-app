@@ -1,17 +1,17 @@
-const api_key = "api_key=43d1439860767035d11845aeba6a6738";
-const root_api = "https://api.themoviedb.org/3";
-const API_URL = `${root_api}/discover/movie?sort_by=popularity.desc&${api_key}`;
+const apiKey = "api_key=43d1439860767035d11845aeba6a6738";
+const rootApi = "https://api.themoviedb.org/3";
+const API_URL = `${rootApi}/discover/movie?sort_by=popularity.desc&${apiKey}`;
 // https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=43d1439860767035d11845aeba6a6738
 
 const IMG_URL = `https://image.tmdb.org/t/p/w500`;
 //https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg
 
-const SEARCH_URL = `${root_api}/search/movie?${api_key}`;
+const SEARCH_URL = `${rootApi}/search/movie?${apiKey}`;
 // https://api.themoviedb.org/3/search/movie?api_key=43d1439860767035d11845aeba6a6738&query=venom
 
 const main = document.querySelector("#main");
-const search_form = document.querySelector("#search-form");
-const search_input = document.querySelector("#search-input");
+const searchForm = document.querySelector("#search-form");
+const searchInput = document.querySelector("#search-input");
 
 // https://api.themoviedb.org/3/genre/movie/list?api_key=43d1439860767035d11845aeba6a6738
 const genres = [
@@ -167,15 +167,15 @@ function voteColor(vote) {
 
 
 
-search_form.addEventListener("submit", (event) => {
+searchForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    if (search_input.value.trim().length === 0) {
-        search_form.setAttribute("disabled", true);
+    if (searchInput.value.trim().length === 0) {
+        searchForm.setAttribute("disabled", true);
         getMovies(API_URL)
     } else {
-        search_form.removeAttribute("disabled");
-        getMovies(SEARCH_URL + '&query=' + search_input.value);
+        searchForm.removeAttribute("disabled");
+        getMovies(SEARCH_URL + '&query=' + searchInput.value);
     };
 });
 

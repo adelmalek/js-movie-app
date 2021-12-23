@@ -3,9 +3,9 @@ GENEREAL
 *******/
 
 :root {
-    --primary-color: #220901;
-    --secondary-color: #941B0C;
-    --tertiary-color: #F6AA1C;
+    --primary-color: #161615;
+    --secondary-color: #2c2c29;
+    --tertiary-color: white;
 }
 
 * {
@@ -37,9 +37,9 @@ header {
 }
 
 .search-input {
-    background-color: #a7200e;
-    border: 1px solid var(--secondary-color);
-    border-radius: 5rem;
+    background-color: inherit;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 0.1rem;
     outline: none;
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
@@ -48,7 +48,7 @@ header {
 }
 
 .search-input::placeholder {
-    color: #e74509;
+    color: rgb(236, 234, 234);
     letter-spacing: 0.1rem;
 }
 
@@ -68,15 +68,15 @@ GENRES
 
 .genre {
     color: var(--tertiary-color);
-    background-color: var(--secondary-color);
-    border-radius: 5rem;
+    background-color: #e4002e;
+    border-radius: 0.1rem;
     padding: 0.6rem 1rem;
     margin: 0.3rem;
     cursor: pointer;
 }
 
 .genre:hover {
-    background-color: #941c0c98;
+    background-color: #ff0235;
     transition: 0.4s ease-in;
 }
 
@@ -96,16 +96,16 @@ MAIN
     width: 20rem;
     margin: 0.6rem;
     background-color: var(--secondary-color);
-    border-radius: 0.5rem;
-    box-shadow: 1px 4px 5px #e74509;
+    border-radius: 0.1rem;
+    box-shadow: 1px 2px 5px var(--tertiary-color);
     position: relative;
     overflow: hidden;
 }
 
 .movie-img {
     width: 100%;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.1rem;
+    border-top-right-radius: 0.1rem;
 }
 
 .infos {
@@ -178,12 +178,13 @@ BOOTSTRAP NAVBAR
 
 .nav-link:hover,
 .navbar-brand:hover {
-    color: #e74509;
-    transition: 0.4s ease-in;
+    color: var(--tertiary-color);
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28246, 170, 28, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
 
 .navbar-toggler {
@@ -197,6 +198,7 @@ paragraph
 
 p {
     color: var(--tertiary-color);
+    margin: 1rem;
 }
 
 

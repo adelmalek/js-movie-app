@@ -82,6 +82,20 @@ GENRES
 
 
 
+/********
+ERROR DIV
+********/
+
+.error {
+    display: flex;
+    justify-content: center;
+    color: var(--tertiary-color);
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+
+
 /***
 MAIN
 ***/
